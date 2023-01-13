@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Navbar from "./components/navbar.component"
+import HomePage from "./components/homepage.component"
 import ExercisesList from "./components/exercises-list.component";
 import MealsList from "./components/meals-list.component";
 import EditExercise from "./components/edit-exercise.component";
@@ -18,6 +19,7 @@ function App() {
       <div className="container">
       <Navbar />
       <br/>
+      <Route path="/" exact component={HomePage} />
       <Route path="/exercises" exact component={ExercisesList} />
       <Route path="/meals" exact component={MealsList} />
       <Route path="/exerciseEdit/:id" component={EditExercise} />
